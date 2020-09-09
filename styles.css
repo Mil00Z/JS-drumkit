@@ -2,6 +2,7 @@
 --white:255,255,255;
 --black:33,33,33;
 --yellow:251, 255, 42;
+--trigger:15,76,129;
 --body-bg: 'https://visualhunt.com/photos/1/people-raising-hands-at-rock-concert-with-artificial-fog-on-stage.jpg';
 --darkGradient:linear-gradient(to right, rgba(var(--black),0.75) 0%,rgba(var(--black),0.75) 100%);
 --twilight:linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
@@ -45,7 +46,7 @@ body{
     min-width:100px;
     background:var(--darkGradient);
     border-radius:var(--radius);
-    box-shadow: 0 0 0 3px rgba(var(--yellow),0.95);
+    box-shadow: 0 0 0 4px rgba(var(--trigger),0.98);
     will-change: transform;
     transition: all 0.15s ease-in-out;
 }
@@ -56,7 +57,7 @@ body{
 }
 
 .playing{
-    animation: scaleSound 0.19s ease-in-out 1 alternate ;
+    animation: scaleSound 0.18s ease-in-out 1 alternate ;
 }
 
 @keyframes scaleSound {

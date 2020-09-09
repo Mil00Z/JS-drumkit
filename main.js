@@ -7,6 +7,7 @@ keys.forEach((item) => {
 
 });
 
+
 window.addEventListener('keydown',function(e){
 
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -21,15 +22,10 @@ window.addEventListener('keydown',function(e){
   
 });
 
-function removeAnim(e) {
-
-    this.classList.remove('playing');
-
-}
-
 function playinClick(){
 
-    const keycode = this.dataset.key;s
+    const keycode = this.dataset.key;
+    // console.log(keycode);
 
     usePlay(document.querySelector(`audio[data-key="${keycode}"]`));
     
@@ -39,7 +35,23 @@ function playinClick(){
 
 function usePlay(elementAudio) {
 
-    elementAudio.currentTime = 0 ;
-    elementAudio.play();
+    try {
+
+        elementAudio.currentTime = 0 ;
+        elementAudio.play();
+
+    } catch (error) {
+
+        window.location.href = `http://stackoverflow.com/search?q=[js]+${error.message}`;
+        
+    }
+ 
 
 } 
+
+function removeAnim(e) {
+
+    this.classList.remove('playing');
+
+}
+
